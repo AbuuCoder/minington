@@ -1,0 +1,110 @@
+body{
+  background-color: #fafafa;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px;
+}
+
+.signin-box, .signup-box {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Billabong', cursive;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="password"] {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #0095f6;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0078c7;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.or {
+  margin: 0 20px;
+  color: #8e8e8e;
+  font-weight: bold;
+}
+
+.social-login a {
+  color: #385185;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.social-login a img {
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.forgot-password {
+  color: #00376b;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.signup-box p {
+  margin: 0;
+}
+
+.signup-box a {
+  color: #0095f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+label{
+  margin-bottom: 10px;
+}

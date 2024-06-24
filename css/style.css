@@ -1,0 +1,230 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #4CAF50;
+}
+
+.logo-icon {
+  width: 26px; /* O'zingizning ruxsat qilingan o'lchamiga mos holda */
+  height: 26px; /* O'zingizning ruxsat qilingan o'lchamiga mos holda */
+  margin-right: 7px; /* Ikonka bilan matn o'rtasida bo'shlik qoldirish uchun */
+  margin-bottom: 2px;
+}
+
+
+.withdraw-button,
+.instagram-button,
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.withdraw-button {
+  background-color: #ff5722;
+}
+
+.withdraw-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+.withdraw-button:active {
+  background-color: #d84315;
+  transform: translateY(2px);
+}
+
+.instagram-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #E1306C;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block; /* Nizomi shu joyga joylashgan */
+  margin-top: 10px;
+}
+
+.instagram-button:hover {
+  background-color: #C13584;
+  transform: scale(1.05);
+}
+
+.instagram-button:active {
+  background-color: #C13584;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+
+.button {
+  background-color: #4CAF50;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: #3e8e41;
+  transform: translateY(2px);
+}
+
+.output {
+  width: 100%;
+  height: 150px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.advantages-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.advantages-header {
+  display: flex;
+  align-items: center;
+}
+
+.advantages-header h2 {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.advantages-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.advantages-list li {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.register-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.withdraw-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header .header-container,
+  .container {
+      padding: 10px;
+  }
+  .logo {
+      font-size: 18px;
+  }
+  .button,
+  .withdraw-button,
+  .instagram-button {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+  .output {
+      height: 100px;
+  }
+}

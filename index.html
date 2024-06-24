@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kripto Mining Sayti</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">
+                <img src="img/image.png" alt="Crypto Mining" class="logo-icon"> Crypto Mining
+            </h1>
+            <nav>
+                <button class="withdraw-button" onclick="showWithdrawMessage()">Pul yechish</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-container">
+        <button class="button" onclick="startMining()">Miningni boshlash</button>
+        <textarea id="output" class="output" readonly></textarea>
+    </div>
+    <div class="container advantages-container">
+        <div class="advantages-header">
+            <h2>Bizning afzalliklarimiz:</h2>
+        </div>
+        <ul class="advantages-list">
+            <li>Tez va samarali mining</li>
+            <li>Foydalanish uchun qulay interfeys</li>
+            <li>Xavfsizlik va maxfiylik</li>
+            <li>24/7 qo'llab-quvvatlash</li>
+            <li>Past komissiyalar</li>
+        </ul>
+    </div>
+    <div class="container register-container">
+        <p class="register-description">Ton kriptovalyutasini mayning qilishni boshlash uchun o'z hisobingizni yarating va instagram orqali ro'yxatdan o'ting</p>
+        <h2>Ro'yxatdan o'ting</h2>
+        <button class="instagram-button"><a href="login.html" target="_blank">Instagram orqali ro'yxatdan o'tish</a></button>
+
+    </div>
+    <div id="withdraw-message" class="withdraw-message">
+        Siz avval ro'yxatdan o'tib minimal miqdorni yig'ishingiz zarur
+    </div>
+    <script>
+        function startMining() {
+            const output = document.getElementById('output');
+            output.value = "Mining jarayoni boshlandi...";
+
+            let hashCount = 0;
+            const difficulty = 50000;
+
+            function mine() {
+                for (let i = 0; i < 1000; i++) {
+                    const hash = Math.random() * difficulty;
+                    if (hash < 1) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function simulateMining() {
+                const miningInterval = setInterval(() => {
+                    if (mine()) {
+                        clearInterval(miningInterval);
+                        output.value = `Mining tugadi! ${++hashCount*0.001} TON topildi.`;
+                    } else {
+                        output.value = `Mining jarayoni davom etmoqda... ${++hashCount} hash urinishlari.`;
+                    }
+                }, 100);
+            }
+
+            simulateMining();
+        }
+
+        function showWithdrawMessage() {
+            const message = document.getElementById('withdraw-message');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 3000); // 3 sekunddan keyin bildirishnoma yo'qoladi
+        }
+    </script>
+</body>
+</html>
